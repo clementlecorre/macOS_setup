@@ -1,0 +1,109 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: yes
+configure_sudoers: no
+configure_terminal: no
+configure_osx: yes
+
+dotfiles_repo: https://github.com/clementlecorre/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/dotfiles
+
+dotfiles_files:
+  - .gitconfig
+  - .zshrc
+  - .osx
+  - .vimrc
+
+homebrew_upgrade_all_packages: yes
+homebrew_installed_packages: yes
+  - autoconf
+  - bash-completion
+  - sshpass
+  - pwgen
+  - yamllint
+  - amazon-ecs-cli
+  - terraform
+  - yq
+  - gnupg
+  - jq
+  - pyenv-virtualenvwrapper
+  - terragrunt
+  - awscli
+  - kubernetes-cli
+  - openssl
+  - kubernetes-helm
+  - pyenv
+  - tig
+  - dive
+  - go
+  - libffi
+  - libusb
+  - picocom
+  - rsy
+  - nc
+  - saml2aws
+  - wget
+  - woof
+  - gpg
+  - git
+  - nmap
+  - circleci
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - iterm2
+  - firefox
+  - sequel-pro
+  - slack
+  - vagrant
+  - spotify
+  - dashlane
+  - postman
+  - clipy
+  - visual-studio-code
+  - telegram
+  - dashlane
+  - nextcloud
+  - viscosity
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - { id: 497799835, name: "Xcode" }
+  - { id: 966486618, name: "WeatherPro" }
+  - { id: 937984704, name: "Amphetamine" }
+  # - { id: 429449079, name: "patterns" }
+
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+  # - name: drush
+  #   state: present # present/absent, default: present
+  #   version: "^8.1" # default: N/A
+gem_packages: []
+  # - name: bundler
+  #   state: present # present/absent/latest, default: present
+  #   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+  # - name: webpack
+  #   state: present # present/absent/latest, default: present
+  #   version: "^2.6" # default: N/A
+pip_packages: ["grip"]
+  # - name: mkdocs
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
